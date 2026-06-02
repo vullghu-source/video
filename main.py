@@ -1,5 +1,12 @@
 import os    
-import requests    
+import uvicorn
+
+if __name__ == "__main__":
+    # Render က ပေးမယ့် Port နံပါတ်ကို ဖတ်ခိုင်းခြင်း၊ မရှိရင် 8000 ကို သုံးခြင်း
+    port = int(os.environ.get("PORT", 8000))
+    # host ကို 0.0.0.0 ထားပြီး server ကို run ခိုင်းခြင်း
+    uvicorn.run(app, host="0.0.0.0", port=port)
+ import requests    
 import os  
 os.environ["IMAGEIO_FFMPEG_EXE"] = "/opt/render/project/src/.venv/lib/python3.11/site-packages/imageio_ffmpeg/binaries/ffmpeg-linux64-v4.2.2"  
   
