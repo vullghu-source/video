@@ -6,4 +6,3 @@ requests
 imageio-ffmpeg  
 moviepy==1.0.3
 pyTelegramBotAPI
-requests
